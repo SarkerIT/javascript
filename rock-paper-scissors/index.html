@@ -45,13 +45,15 @@
 
       <h5 class="text-4xl text-violet-500 font-bold mb-20">Good Luck!</h5>
     </div>
+
+    <!-- buttons  -->
     <div
-      class="flex flex-col justify-center items-center mx-auto my-10 gap-20 lg:flex-row"
+      class="flex flex-col justify-center items-center m-20 my-20 gap-20 lg:flex-row py-10 shadow-2xl rounded-xl"
     >
       <!-- rock button  -->
       <button
         class="btn text-3xl btn btn-wide btn-neutral text-white font-bold"
-        onclick="clickRock()"
+        onclick="playGame('Rock')"
       >
         <i class="fa-solid fa-mound"></i>Rock
       </button>
@@ -59,7 +61,7 @@
       <!-- papers button  -->
       <button
         class="btn text-3xl btn btn-wide btn-info text-white font-bold"
-        onclick="clickPaper()"
+        onclick="playGame('Paper')"
       >
         <i class="fa-regular fa-note-sticky"></i> Paper
       </button>
@@ -67,7 +69,7 @@
       <!-- scissors button  -->
       <button
         class="btn text-3xl btn btn-wide btn-primary text-white font-bold"
-        onclick="clickScissors()"
+        onclick="playGame('Scissors')"
       >
         <!-- <bdo dir="rtl">
           Hello
@@ -78,8 +80,6 @@
         <i class="fa-solid fa-scissors"></i>
         Scissors
       </button>
-
-      <script></script>
     </div>
 
     <script src="script.js"></script>
