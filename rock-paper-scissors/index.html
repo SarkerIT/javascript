@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Google fonts  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- DaisyUI CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- font-awesome script  -->
+    <script
+      src="https://kit.fontawesome.com/2f54608c53.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <title>Rock-Paper-Scissors</title>
+  </head>
+  <body class="m-20">
+    <h3 class="text-center text-red-400 font-bold text-5xl my-10">
+      Play Rock-Paper-Scissors!
+    </h3>
+    <p class="text-2xl">
+      <span class="font-bold">Rules:</span> A rock beats scissors, scissors beat
+      paper by cutting it, and paper beats rock by covering it.
+    </p>
+    <p class="text-2xl my-10">
+      <span class="font-bold">Instructions:</span> Click on the button to choose
+      your object. The computer will choose it's object randomly.
+    </p>
+
+    <h5 class="text-4xl text-violet-500 font-bold">Good Luck!</h5>
+
+    <div
+      class="flex flex-col justify-center items-center mx-auto my-10 gap-20 lg:flex-row"
+    >
+      <button
+        class="btn text-3xl btn btn-wide btn-neutral text-white font-bold"
+      >
+        Rock
+      </button>
+
+      <button class="btn text-3xl btn btn-wide btn-info text-white font-bold">
+        Paper
+      </button>
+      <button
+        class="btn text-3xl btn btn-wide btn-warning text-white font-bold"
+        onclick="alert('You clicked me!') "
+      >
+        Scissors
+      </button>
+    </div>
+
+    <script></script>
+  </body>
+</html>
