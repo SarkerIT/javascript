@@ -12,8 +12,24 @@ for (item in arr) {
   }
 }
 
-console.log(`The odd average is:`, oddSum / oddCount);
-// --------- even
+console.log(`The odd average method-1 is:`, oddSum / oddCount);
+
+// odd method 2
+
+let oddArr = [];
+for (item in arr) {
+  if (arr[item] % 2 !== 0) {
+    oddArr.push(arr[item]);
+  }
+}
+
+let sum = 0;
+for (const number of oddArr) {
+  sum = sum + number;
+}
+console.log(`The odd average method-2 is:`, sum / oddArr.length);
+
+// --------- EVEN -----
 let evenCount = 0;
 let evenSum = 0;
 
@@ -24,4 +40,4 @@ for (item in arr) {
   }
 }
 
-console.log(evenSum / evenCount);
+console.log(`The even average is:`, evenSum / evenCount);
