@@ -10,6 +10,9 @@ let myObj = {
 // let key = "";
 
 for (let keys in myObj) {
-  //   key += keys + " ";
+  // key += keys + " ";
   console.log(`key: ${keys} | type: ${typeof keys}`);
+
+  console.log(`value: ${myObj[keys]} | type: ${typeof myObj[keys]}`);
+  console.log("------");
 }
