@@ -7,9 +7,9 @@ let myObj = {
 
 // console.log(myObj);
 
-let key = "";
+// let key = "";
 
 for (let keys in myObj) {
-  key += keys + " ";
+  //   key += keys + " ";
   console.log(`key: ${keys} | type: ${typeof keys}`);
 }
