@@ -1,4 +1,4 @@
-// find if any year is a a leap year
+// find if any year is a leap year
 
 function isLeapYear(year) {
   if (year % 4 === 0) {
