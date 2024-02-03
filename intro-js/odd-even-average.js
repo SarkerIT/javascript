@@ -1,6 +1,7 @@
-let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// Find the average of the odd numbers in teh array
+let arr = [1, 2, 3, 4, 5];
 
-// -- odd
+// -- odd: method 1
 let oddCount = 0;
 let oddSum = 0;
 
@@ -11,8 +12,7 @@ for (item in arr) {
   }
 }
 
-console.log(oddSum / oddCount);
-
+console.log(`The odd average is:`, oddSum / oddCount);
 // --------- even
 let evenCount = 0;
 let evenSum = 0;
