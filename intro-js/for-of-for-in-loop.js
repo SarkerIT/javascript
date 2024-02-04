@@ -1,6 +1,12 @@
-// Remove all the duplicates from an array
+// Remove all the duplicates from an array with for of OR for in loop
 
-// with "for in" loop
+// FOR IN: The for...in loop is used to iterate over the enumerable (JUST COUNT; NO INDEX) properties of an object. It works with objects and can be used to loop through the keys of an object.
+
+//FOR OF: The for...of loop is used to iterate over (HAVE SPECIFIC INDEX NUMBER) the values of an iterable object, such as arrays, strings, sets, and maps.
+
+// ALL ARRAYS ARE OBJECTS BUT ALL OBJECTS ARE NOT ARRAYS.
+
+// METHOD 1: with "for in" loop
 const arr = [1, 2, 9, 3, 1, 4, 5, 1, 3, 5, 7, 8, 9];
 
 let arrNew = [];
@@ -17,12 +23,12 @@ function removeDuplicates(array) {
 }
 
 let newUnique = removeDuplicates(arr);
-// console.log(`Unsorted: `, newUnique);
+console.log(`Unsorted: `, newUnique);
 
 let newUniqueSorted = removeDuplicates(arr.sort());
 // console.log(`Sorted:`, newUniqueSorted);
 
-// with "for of' loop
+// METHOD 2: with "for of' loop
 const arr2 = [1, 2, 3, 4, 1, 2, 3, 4, 5];
 
 function removeDuplicates2(array) {
@@ -37,12 +43,3 @@ function removeDuplicates2(array) {
 
 let result = removeDuplicates2(arr2);
 console.log(result);
-
-// quiz 21.2
-// for (var i = 0; i < 5; i++) {
-//   setTimeout(function () {
-//     console.log(i);
-//   }, 100);
-// }
-
-// console.log(Math.sqrt(16));
