@@ -20,3 +20,14 @@ shoppingList.shift();
 console.log(shoppingList);
 shoppingList.unshift("Dry-erase marker");
 console.log(shoppingList);
+
+let a = null;
+console.log(typeof a);
+
+// -----------
+function sorted(arr) {
+  const [a, b] = arr;
+  if (a > b) {
+    console.log("A is greater");
+  }
+}
