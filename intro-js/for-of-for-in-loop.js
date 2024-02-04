@@ -3,6 +3,7 @@
 // FOR IN: The for...in loop is used to iterate over the enumerable (JUST COUNT; NO INDEX) properties of an object. It works with objects and can be used to loop through the keys of an object.
 
 //FOR OF: The for...of loop is used to iterate over (HAVE SPECIFIC INDEX NUMBER) the values of an iterable object, such as arrays, strings, sets, and maps.
+//for...of does not iterate over the properties of an object but focuses on the values.
 
 // ALL ARRAYS ARE OBJECTS BUT ALL OBJECTS ARE NOT ARRAYS.
 
