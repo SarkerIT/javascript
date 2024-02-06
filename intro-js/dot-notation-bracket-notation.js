@@ -13,7 +13,7 @@ for (let item in myFrog) {
   console.log(item);
 }
 
-// Find the values with dot notation (will give "undefined" because keys are not static but dynamic)
+// LOOPING: Find the values with dot notation (will give "undefined" because keys are not static but dynamic)
 for (let item in myFrog) {
   console.log(myFrog.item);
 }
