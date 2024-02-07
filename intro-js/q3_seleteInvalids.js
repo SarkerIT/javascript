@@ -1,0 +1,17 @@
+function deleteInvalids(arr) {
+  let arr2 = [];
+
+  for (let item of arr) {
+    // console.log(item);
+    // console.log(typeof item);
+
+    if (typeof item === "number" && Number.isNaN(item) == false) {
+      arr2.push(item);
+    }
+  }
+  return arr2;
+}
+
+// let x = deleteInvalids([3, 5, "klnjkjh", 0, 9, NaN, 1, 12, undefined]);
+
+// console.log(x);
