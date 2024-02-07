@@ -1,4 +1,5 @@
 function deleteInvalids(arr) {
+  if (Array.isArray(arr) !== true) return "Invalid Array";
   let arr2 = [];
 
   for (let item of arr) {
@@ -15,3 +16,7 @@ function deleteInvalids(arr) {
 // let x = deleteInvalids([3, 5, "klnjkjh", 0, 9, NaN, 1, 12, undefined]);
 
 // console.log(x);
+
+let x = deleteInvalids({ color: "red", price: 50 });
+
+console.log(x);
