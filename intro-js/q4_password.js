@@ -12,7 +12,9 @@ function password(obj) {
     let passCode = "";
 
     for (let item in obj) {
-      passCode = `${obj.siteName}#${obj.name}@${obj.birthYear}`;
+      passCode = `${
+        obj.siteName.charAt(0).toUpperCase() + obj.siteName.slice(1)
+      }#${obj.name}@${obj.birthYear}`;
     }
     return passCode;
   }
@@ -20,5 +22,5 @@ function password(obj) {
 
 // invoking the function
 // console.log(
-//   password({ name: "Kilomuddin", birthYear: 1000, siteName: "Google" })
+//   password({ name: "Kilomuddin", birthYear: 1000, siteName: "binghoogle" })
 // );
