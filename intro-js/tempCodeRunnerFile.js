@@ -1,1 +1,1 @@
-NaN
+  if (Array.isArray(arr) !== true || livingCost !== "number") return "invalid";
