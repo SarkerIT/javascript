@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <title>Geometry Hacker</title>
+  </head>
+
+  <body>
+    <header class="bg-red-300">
+      <div class="navbar bg-red-200">
+        <div class="navbar-start">
+          <div class="dropdown">
+            <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h7"
+                />
+              </svg>
+            </div>
+            <ul
+              tabindex="0"
+              class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+            >
+              <li><a>Homepage</a></li>
+              <li><a>Portfolio</a></li>
+              <li><a>About</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="navbar-center">
+          <a class="btn btn-ghost text-xl">daisyUI</a>
+        </div>
+        <div class="navbar-end">
+          <button class="btn btn-ghost btn-circle">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+              />
+            </svg>
+          </button>
+          <button class="btn btn-ghost btn-circle">
+            <div class="indicator">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"
+                />
+              </svg>
+              <span class="badge badge-xs badge-primary indicator-item"></span>
+            </div>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="flex flex-col md:flex-row m-4 gap-16">
+        <div
+          class="flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-around items-center p-4 border-2 border-red-300 bg-yellow-100"
+        >
+          <!-- card 1: Triangle   -->
+          <div
+            class="card w-96 bg-base-100 shadow-xl justify-center items-center border border-green-600 mx-auto"
+          >
+            <figure class="px-10 pt-10">
+              <img
+                src="./images/triangle.png"
+                alt="triangle"
+                class="rounded-xl h-48 w-64"
+              />
+            </figure>
+            <div class="card-body items-center text-center">
+              <div class="text-2xl">
+                <h2 class="text-3xl font-bold">Triangle</h2>
+                <p class="my-4 text-2xl">Area = 0.5 X b X h</p>
+                <input
+                  id="triangle-base"
+                  class="w-28 rounded-md bg-slate-200 p-2"
+                  type="text"
+                  placeholder="b"
+                />
+                <span>cm</span
+                ><input
+                  id="triangle-height"
+                  class="w-28 rounded-md ml-4 bg-slate-200 p-2"
+                  type="text"
+                  placeholder="h"
+                />
+                <span>cm</span>
+              </div>
+              <div>
+                <p class="my-4 text-2xl text-blue-700 font-bold">
+                  Area: <span id="show-triangle-area"> </span> cm<sup>2</sup>
+                </p>
+              </div>
+              <div class="card-actions w-full">
+                <button
+                  onclick="calculateTriangleArea()"
+                  class="btn btn-primary w-full my-4 text-2xl"
+                >
+                  Calculate
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- card 2 rectangle 
+           -->
+
+          <div
+            class="card w-96 bg-base-100 shadow-xl justify-center items-center border border-red-600 mx-auto"
+          >
+            <figure class="px-10 pt-10">
+              <img
+                src="./images/rectangle.png"
+                alt="rectangle"
+                class="rounded-xl h-48 w-64"
+                alt="rectangle"
+              />
+            </figure>
+            <div class="card-body items-center text-center">
+              <div class="text-2xl">
+                <h2 class="text-3xl font-bold">Rectangle</h2>
+                <p class="my-4 text-2xl">Area = b X h</p>
+                <input
+                  id="rectangle-height"
+                  class="w-28 rounded-md bg-slate-200 p-2"
+                  type="text"
+                  placeholder="b"
+                />
+                <span>cm</span
+                ><input
+                  id="rectangle-width"
+                  class="w-28 rounded-md bg-slate-200 p-2 ml-4"
+                  type="text"
+                  placeholder="h"
+                />
+                <span>cm</span>
+
+                <div>
+                  <p class="my-4 text-2xl text-blue-700 font-bold">
+                    Area: <span id="rectangle-area"> </span> cm<sup>2</sup>
+                  </p>
+                </div>
+              </div>
+              <div class="card-actions justify-end w-full">
+                <button
+                  class="btn btn-primary w-full text-2xl my-4"
+                  onclick="calculateRectangleArea()"
+                >
+                  Calculate
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- card 3 parallelogram -->
+          <div
+            class="card w-96 bg-base-100 shadow-xl justify-center items-center border border-red-600 mx-auto"
+          >
+            <figure class="px-10 pt-10">
+              <img
+                src="./images/parallelogram.png"
+                alt="rectangle"
+                class="rounded-xl h-48 w-64"
+                alt="rectangle"
+              />
+            </figure>
+            <div class="card-body items-center text-center">
+              <div class="text-2xl">
+                <h2 class="text-3xl font-bold">Parallelogram</h2>
+                <p class="my-4 text-2xl">Area = b X h</p>
+                <input
+                  id="para-base"
+                  class="w-28 rounded-md bg-slate-200 p-2"
+                  type="text"
+                  placeholder="b"
+                />
+                <span>cm</span
+                ><input
+                  id="para-height"
+                  class="w-28 rounded-md bg-slate-200 p-2 ml-4"
+                  type="text"
+                  placeholder="h"
+                />
+                <span>cm</span>
+
+                <div>
+                  <p class="my-4 text-2xl text-blue-700 font-bold">
+                    Area: <span id="show-para-area"> </span> cm<sup>2</sup>
+                  </p>
+                </div>
+              </div>
+              <div class="card-actions w-full">
+                <button
+                  class="btn btn-primary w-full text-2xl my-4"
+                  onclick="calculateParallelogramArea()"
+                >
+                  Calculate
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="w-96 border-2 p-4 border-slate-400 text-center bg-green-100"
+        >
+          <h3 class="text-4xl">Total Area</h3>
+          <p class="my-10">Area of ___ is: ___ cm<sup>2</sup></p>
+        </div>
+      </div>
+    </main>
+
+    <!-- <script src="scripts/script.js"></script>
+     -->
+
+    <script src="scripts/script2.js"></script>
+  </body>
+</html>

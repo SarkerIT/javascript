@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- daisy UI  -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Phone Hunt API</title>
+  </head>
+  <body>
+    <header>
+      <h1 class="font-bold text-center text-3xl pt-10">Phone Hunting Wizard</h1>
+    </header>
+
+    <main class="comntainer mt-8 mx-10">
+      <!-- search field  -->
+      <div class="flex bg-gray-100 p-4 m-4 justify-between">
+        <div class="flex gap-2">
+          <input
+            id="search-field"
+            type="text"
+            placeholder="Type here"
+            class="input input-bordered w-full max-w-xs bg-black rounded-lg text-white"
+          />
+          <button class="btn btn-accent text-white" onclick="handleSearch()">
+            Search
+          </button>
+        </div>
+
+        <!-- another search field  -->
+        <div class="flex gap-2">
+          <input
+            id="search-field-2"
+            type="text"
+            placeholder="Type here"
+            class="input input-bordered w-full max-w-xs bg-blue-200 rounded-lg text-white"
+          />
+          <button class="btn btn-outline btn-accent" onclick="handleSearch2()">
+            Search again
+          </button>
+        </div>
+      </div>
+
+      <!-- spinner or loader  -->
+
+      <div id="loading-spinner" class="text-center hidden">
+        <span class="loading loading-lg text-primary"></span>
+      </div>
+
+      <!-- search result  -->
+      <div
+        class="phone-container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+        id="phone-container-id"
+      ></div>
+
+      <!-- show all button  -->
+      <div class="items-center text-center">
+        <button
+          id="show-all-phones"
+          class="btn btn-secondary hidden"
+          onclick="showAll()"
+        >
+          Show All
+        </button>
+      </div>
+
+      <!-- show details modal -->
+
+      <!-- Open the modal using ID.showModal() method -->
+
+      <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+        <div class="modal-box">
+          <h3 id="show-details-phone-name" class="font-bold text-2xl"></h3>
+
+          <div id="show-details-container"></div>
+
+          <div class="modal-action">
+            <form method="dialog">
+              <!-- if there is a button in form, it will close the modal -->
+              <button class="btn">Close</button>
+            </form>
+          </div>
+        </div>
+      </dialog>
+    </main>
+    <footer></footer>
+    <script src="./js/phone.js"></script>
+  </body>
+</html>
